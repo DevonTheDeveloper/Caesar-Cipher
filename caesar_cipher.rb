@@ -7,7 +7,8 @@ def caesar_cipher(str, shift = -3)
   encrypt = num_values.map do |char|
     # validate input
     if char.between?(65, 90) || char.between?(97, 122)
-        char + shift
+      # wrap input & calculate
+      char + shift > 90 || char + shift > 122 ? (char + shift) - 26 : char + shift
     else
       return
     end
