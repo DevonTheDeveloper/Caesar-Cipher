@@ -30,4 +30,3 @@ For this project the only language that was used was **Ruby.**
 - [x]  Encrypt the string
 - [x]  Wrap the encrypted string
 - [x]  Allow punctuation and other characters
- 
