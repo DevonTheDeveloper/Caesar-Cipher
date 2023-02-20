@@ -2,7 +2,7 @@ def caesar_cipher(str, shift = 3)
   # store ascii values of string in variable
   # A-Z == 65 - 90
   # a-z == 97 - 122
-  num_values = str.split('').map {|x| x.ord}
+  num_values = str.split('').map {|chr| chr.ord}
   # encrypt the string
   encrypt = num_values.map do |char|
     # validate input
@@ -25,7 +25,7 @@ def caesar_cipher(str, shift = 3)
       char
     end
   end
-  encrypted_str = encrypt.map! {|x| x.chr}.join
+  encrypted_str = encrypt.map! {|int| int.chr}.join
   # return encrypted string
   p encrypted_str
   return encrypted_str
